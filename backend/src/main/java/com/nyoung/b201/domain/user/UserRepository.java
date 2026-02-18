@@ -1,5 +1,6 @@
 package com.nyoung.b201.domain.user;
 
+import com.nyoung.b201.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

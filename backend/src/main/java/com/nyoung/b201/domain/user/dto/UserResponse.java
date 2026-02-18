@@ -1,6 +1,6 @@
 package com.nyoung.b201.domain.user.dto;
 
-import com.nyoung.b201.domain.user.User;
+import com.nyoung.b201.domain.user.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,18 +22,18 @@ public class UserResponse {
     public UserResponse(User user) {
         this.id = user.getId();
         this.email = user.getEmail();
-        this.name = user.getName();
-        this.team = user.getTeam();
+//        this.name = user.getName();
+//        this.team = user.getTeam();
     }
 
     public static UserResponse from(User user) {
         return UserResponse.builder()
                 .id(user.getId())
                 .email(user.getEmail())
-                .name(user.getName())
-                .team(user.getTeam())
-                .admin(user.isAdmin())
-                .deleted(user.isDeleted())
+//                .name(user.getName())
+//                .team(user.getTeam())
+//                .admin(user.isAdmin())
+//                .deleted(user.isDeleted())
                 .build();
     }
 

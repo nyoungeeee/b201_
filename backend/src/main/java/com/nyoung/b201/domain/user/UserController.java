@@ -58,16 +58,16 @@ public class UserController {
         return ResponseEntity.ok(SuccessResponse.success());
     }
 
-    @DeleteMapping
-    @Operation(summary = "사용자 삭제")
-    public ResponseEntity<SuccessResponse<Void>> delete(Long id) {
-        userService.delete(id);
-        return ResponseEntity.ok(SuccessResponse.success());
-    }
+//    @DeleteMapping
+//    @Operation(summary = "사용자 삭제")
+//    public ResponseEntity<SuccessResponse<Void>> delete(Long id) {
+//        userService.delete(id);
+//        return ResponseEntity.ok(SuccessResponse.success());
+//    }
 
-    @GetMapping("/admincheck/{id}")
-    @Operation(summary = "운영자 여부 체크", description = "해당 계정의 운영자 여부를 체크합니다.")
-    public ResponseEntity<SuccessResponse<Boolean>> check(@PathVariable("id") Long userId) {
-        return ResponseEntity.ok(SuccessResponse.success(userService.checkAdmin(userId)));
-    }
+//    @GetMapping("/admincheck/{id}")
+//    @Operation(summary = "운영자 여부 체크", description = "해당 계정의 운영자 여부를 체크합니다.")
+//    public ResponseEntity<SuccessResponse<Boolean>> check(@PathVariable("id") Long userId) {
+//        return ResponseEntity.ok(SuccessResponse.success(userService.checkAdmin(userId)));
+//    }
 }
