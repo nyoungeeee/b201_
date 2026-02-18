@@ -24,6 +24,9 @@ public class Team extends BaseEntity {
     @Column(nullable = false, length = 100)
     private String name;
 
+    @Column(nullable = false)
+    private boolean active = true;
+
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TeamMember> members = new ArrayList<>();
 }
